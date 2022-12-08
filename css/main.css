@@ -11,21 +11,6 @@ a {
   text-decoration: none;
 }
 
-/* FLOAT */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
-.float--left {
-  float: left;
-}
-
-.float--right {
-  float: right;
-}
-
 /* BTN */
 .btn {
   height: 34px;
@@ -82,6 +67,49 @@ a {
 .input--text::-ms-input-placeholder { color: #cacaca; }
 .input--text::-moz-input-placeholder { color: #cacaca; }
 
+/* FLOAT */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.float--left {
+  float: left;
+}
+
+.float--right {
+  float: right;
+}
+
+/* SUMMARY */
+.summary {
+  
+}
+.summary .summary__title{
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+.summary .summary__description{
+  font-size: 26px;
+  font-weight: 300;
+  color: #767676;
+  line-height: 1.5;
+}
+
+/* SECTION & INNER */
+.section {
+  position: relative;
+}
+.section .inner {
+  max-width: 980px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
 /* HEADER */
 header {
   border-bottom: 1px solid rgba(0, 0, 0, .75);
@@ -90,8 +118,6 @@ header {
   
 }
 header .inner {
-  max-width: 980px;
-  margin: 0 auto;
   height: 78px;
 }
 header .menu-group {
@@ -168,4 +194,88 @@ header .sub-menu li a {
 }
 header .sub-menu li a:hover {
   color: #4078c0;
+}
+
+/* VISUAL */
+.section--visual {
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+}
+
+.section--visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* height: 100%; */
+  left: 0;
+  right: 0;
+  /* width: 100%; */
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.section--visual .inner {
+  padding: 160px 0;
+  display: flex;
+}
+
+.section--visual .summary {
+  /* flex-grow: 1;
+  flex-basis: 0; */
+  flex: 1;
+
+  /* grow, shirink, basis */
+  /* flex: 0 1 0; */
+  /* 단축속성에서 basis의 기본 값 auto 값은 0으로 바뀌어버림
+  shirink는 기본값이 1이므로
+  flex-grow값만 바뀌었으니 1로 명시해서
+  flex : 1;로 표기 */
+  margin-right: 90px;
+}
+
+.section--visual .summary__title{
+  color: #fff;
+  font-size: 54px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .25),
+               0 1px 25px rgba(0, 0, 0, .75);
+}
+.section--visual .summary__description{
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .25),
+               0 1px 25px rgba(0, 0, 0, .75);
+}
+
+#sign-form {
+ width: 340px;
+ margin-top: 16px;
+}
+
+#sign-form li {
+  margin-bottom: 17px;
+}
+#sign-form li:last-child {
+  margin-bottom: 0;
+}
+
+#sign-form .input--text {
+  width: 100%;
+  height: 40px;
+}
+
+#sign-form .caption {
+  font-size: 12px;
+  margin-top: 5px;
+  color: rgba(255, 255, 255, .6);
+  line-height: 1.5;
+  text-align: center;
+}
+
+#sign-form [type="submit"] {
+  width: 100%;
+  height: 62px;
+  padding: 0 25px;
+  font-size: 20px;
+  justify-content: center;
 }
