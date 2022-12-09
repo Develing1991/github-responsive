@@ -434,3 +434,57 @@ footer .logo svg {}
 footer .logo:hover svg {
   fill: #4078c0;
 }
+
+
+/* MEDIA */
+@media (max-width: 1024px) {
+  header.section .inner {
+    /* max-width 는 .section .inner에 정의 되어 있으니
+    선택자 점수가 더 높아서 header.section 일치 선택자를 추가해서 점수를 높여줌 */
+    max-width: none;
+    height: auto;
+    padding: 0 20px;
+  }
+  header .menu-group,
+  header .sign-group {
+    float: none;
+  }
+  /* 
+    header .menu-group .main-menu
+    처음에 클래스 선택자들의 작성을 점수고려 안하고
+    무분별하게 작성하면 이와같이.. 높은 점수 때문에 공통으로 들어가야할
+    toggle 클래스의 덮어씌울 속성 스타일이 안먹힘... 잘 생각해서 해야 됨
+    header .main-menu
+    담엔 이런식으로.. 영향이 안간다면 점수를 낮게 설계하는 방식으로..
+   */
+   
+   /* 
+   안그러면 
+   header .toggle { display: none; } 이렇게 작성해도 될걸
+   ->
+   header .menu-group .main-menu.toggle,
+   header .sign-group.toggle,
+   header .toggle {} 이렇게 계속 점수를 높여이거나 맞춰가면서 작업해야함
+   또는 !important를 사용하게 되어버림... */
+   header .menu-group .main-menu.toggle,
+   header .sign-group.toggle,
+   header .toggle {
+    display: none;
+  }
+
+  header .logo {
+    padding: 12px 0;
+  }
+  
+  #toggle-btn {
+    background: url('../img/menu-toggle.svg');
+    width: 18px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+    text-indent: -9999px;
+  }
+  
+}
