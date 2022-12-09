@@ -1,3 +1,54 @@
-header {
-  background-color: red;
+/* COMMON */
+.summary .summary__title {
+  font-size: 34px !important;
 }
+
+.summary .summary__description {
+  font-size: 22px !important;
+}
+
+/* FEATURE */
+.section--feature .tiles li {
+  width: 100%;
+  border-right: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+.section--feature .tiles li:last-child {
+  border-bottom: none;
+}
+
+/* Where is */
+#map {
+  /* .inner에 좌우 padding 20px 있기 때문에
+  width: 100%;하면 틀어진다. auto로 ㄱㄱ */
+  width: auto;
+  margin: 40px -20px 0 -20px;
+  border-left: none;
+  border-right: none;
+}
+
+/* PRICING */
+.section--pricing .card {
+  display: block;
+}
+
+.section--pricing .card .cell2{
+  border-top:  1px solid #e5e5e5;
+  border-left: none;
+}
+
+/* FOOTER */
+footer .site-links {
+  float: none;
+  display: block;
+  text-align: center;
+}
+
+footer .site-links:first-child {
+  margin-bottom: 20px;
+}
+
+footer .site-links li {
+  display: inline;
+}
+
