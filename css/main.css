@@ -469,13 +469,19 @@ footer .logo:hover svg {
    header .menu-group .main-menu.toggle,
    header .sign-group.toggle,
    header .toggle {
-    display: none;
+    /* display: none; */
   }
 
+  header .menu-group {
+    display: block;
+  }
+  header .menu-group .main-menu {
+    display: block;
+  }
   header .logo {
     padding: 12px 0;
   }
-  
+
   #toggle-btn {
     background: url('../img/menu-toggle.svg');
     width: 18px;
